@@ -1,0 +1,50 @@
+//all the styles regarding the task class would come here
+.task
+  padding: 0
+  text-decoration-color: $gray-500
+  position: relative
+  display: flex
+  background-color: $gray-500
+  border-bottom: 1px solid $gray-300
+  &--item
+    padding: 0.25em 1.5em
+    list-style: none
+  &--input
+    transform: scale(1.5)
+  &--group
+    padding: 0.25em 1.5em
+    width: 100%
+    display: flex
+    flex-direction: row
+    align-items: center
+  &--button
+    color: #f00
+    background-color: transparent
+    border: none
+    padding: 0.15em 0.25em
+    position: relative
+    cursor: pointer
+    float: right
+    margin:
+      right: 1.5em
+    transition: .25s ease all
+    z-index: 999
+    &:hover
+      transition: .25s ease all
+    &:after
+      display: none
+      content: ' '
+      height: 1.25em
+      width: 1.25em
+      background-color: #fff
+      transition: .25s ease all
+      border-radius: 50%
+      position: absolute
+      right: 0.125em
+      top: 0.15em
+      z-index: -1
+    &:hover::after
+      transition: .25s ease all
+      display: block
+  &--icon
+    color: $black

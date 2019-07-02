@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4; }
+
+a {
+  color: #333;
+  text-decoration: none; }
+
+body {
+  background-color: #dee2e6;
+  padding-top: 3em; }
+
+.nav {
+  border-bottom-color: #ced4da;
+  border-bottom-style: solid;
+  border-bottom-width: 1px; }
+  .nav--list {
+    list-style: none;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; }
+  .nav--item {
+    display: inline-block;
+    padding: 0.25em 0.4em; }
+    .nav--item:hover {
+      background-color: #007bff; }
+    .nav--item:hover .nav--link {
+      text-decoration: underline; }
+  .nav--link {
+    color: #fff; }
+
+.form {
+  display: flex;
+  width: 100%;
+  background-color: #dee2e6; }
+  .form--input {
+    padding: 0.75em 1.5em;
+    border: 0;
+    background-color: transparent;
+    flex: 3; }
+  .form--button {
+    background-color: #28a745;
+    color: #fff;
+    border: 0;
+    flex: 1; }
+
+.wrapper {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #343a40;
+  color: #fff;
+  padding-top: 0;
+  padding-bottom: 0.5em;
+  padding-left: 0;
+  padding-right: 0;
+  min-height: 50vh;
+  border-radius: 0.5em; }
+  .wrapper--title {
+    text-align: center;
+    padding-bottom: 0.5em; }
+
+.task {
+  padding: 0;
+  text-decoration-color: #adb5bd;
+  position: relative;
+  display: flex;
+  background-color: #adb5bd;
+  border-bottom: 1px solid #dee2e6; }
+  .task--item {
+    padding: 0.25em 1.5em;
+    list-style: none; }
+  .task--input {
+    transform: scale(1.5); }
+  .task--group {
+    padding: 0.25em 1.5em;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center; }
+  .task--button {
+    color: #f00;
+    background-color: transparent;
+    border: none;
+    padding: 0.15em 0.25em;
+    position: relative;
+    cursor: pointer;
+    float: right;
+    margin-right: 1.5em;
+    transition: 0.25s ease all;
+    z-index: 999; }
+    .task--button:hover {
+      transition: 0.25s ease all; }
+    .task--button:after {
+      display: none;
+      content: " ";
+      height: 1.25em;
+      width: 1.25em;
+      background-color: #fff;
+      transition: 0.25s ease all;
+      border-radius: 50%;
+      position: absolute;
+      right: 0.125em;
+      top: 0.15em;
+      z-index: -1; }
+    .task--button:hover::after {
+      transition: 0.25s ease all;
+      display: block; }
+  .task--icon {
+    color: #000; }
+
+/*# sourceMappingURL=App.css.map */
