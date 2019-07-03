@@ -18,7 +18,12 @@ body {
 .nav {
   border-bottom-color: #ced4da;
   border-bottom-style: solid;
-  border-bottom-width: 1px; }
+  border-bottom-width: 1px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #343a40; }
   .nav--list {
     list-style: none;
     width: 50%;
@@ -64,7 +69,22 @@ body {
   border-radius: 0.5em; }
   .wrapper--title {
     text-align: center;
-    padding-bottom: 0.5em; }
+    padding-bottom: 0em;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #dee2e6;
+    margin-bottom: 0.5em; }
+  .wrapper--input {
+    background: transparent;
+    border: 0;
+    flex: 3;
+    text-align: center;
+    color: #dee2e6;
+    font-size: 1.25em;
+    line-height: 1.75em;
+    padding-left: 18%; }
+  .wrapper--icon {
+    flex: 1; }
 
 .task {
   padding: 0;
@@ -94,20 +114,21 @@ body {
     float: right;
     margin-right: 1.5em;
     transition: 0.25s ease all;
-    z-index: 999; }
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
     .task--button:hover {
       transition: 0.25s ease all; }
     .task--button:after {
       display: none;
       content: " ";
-      height: 1.25em;
-      width: 1.25em;
+      height: 1.35em;
+      width: 1.35em;
       background-color: #fff;
       transition: 0.25s ease all;
       border-radius: 50%;
       position: absolute;
-      right: 0.125em;
-      top: 0.15em;
       z-index: -1; }
     .task--button:hover::after {
       transition: 0.25s ease all;
