@@ -1,4 +1,5 @@
 #React To-Do application
+###Dev branch commit
 ##Purpose
 The purpose behind this project is to familiarize myself with React and expand my knowledge in ES6/ES7 as well as Typescript. I do not claim ownership of this product since it is based on an online tutorial accessible by anyone. Credit goes to Traversy Media on YouTube.
 ##Usage
