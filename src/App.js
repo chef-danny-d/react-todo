@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { BrowserRouter as Router, Route} from 'react-router-dom';
+import { HashRouter, Route} from 'react-router-dom';
 import Todos from './components/Todos';
 import './App.css';
 import Header from './components/layout/Header';
@@ -39,9 +39,9 @@ class App extends Component{
 
     //this method deletes the todo
     delTodo = (id) => {
-axios.delete(`https://jsonplaceholder.typicode.com/todos/&{id}`)
-    .then(res => this.setState({todos: [...this.state.todos.filter(todo => todo.id !== id)]}))
-      console.log(id);
+        axios.delete(`https://jsonplaceholder.typicode.com/todos/&{id}`)
+            .then(res => this.setState({todos: [...this.state.todos.filter(todo => todo.id !== id)]}))
+        console.log(id);
     };
 
     //list naming
@@ -60,23 +60,22 @@ axios.delete(`https://jsonplaceholder.typicode.com/todos/&{id}`)
 
     render() {
         return(
-            <Router>
+            <HashRouter basename='/'>
                 <div className="wrapper">
                     <Header />
-                    <Route exact path="react-todo/" render={props => ( // 'exact' acts as a default page indicator
-                        <React.Fragment> {/*bringing in shadow element to wrap react tags up*/}
-                            <div className="wrapper--title">
-                                <input type="text" name="listTitle" className="wrapper--input" placeholder="To-Do List" value={this.state.listTitle} onChange={this.listName}/>
-                                <i className="material-icons wrapper--icon">edit</i>
-                            </div>
-                            <AddTodo addTodo={this.addTodo}/>
-                            <Todos todos={this.state.todos} markComplete={this.markComplete} delTodo={this.delTodo}/>
-                        </React.Fragment>
-                    )}/>
-                    <Route path="react-todo/about" component={About}/>
-
+                        <Route exact path='/' render={props => ( // 'exact' acts as a default page indicator
+                            <React.Fragment> {/*bringing in shadow element to wrap react tags up*/}
+                                <div className="wrapper--title">
+                                    <input type="text" name="listTitle" className="wrapper--input" placeholder="To-Do List" value={this.state.listTitle} onChange={this.listName}/>
+                                    <i className="material-icons wrapper--icon">edit</i>
+                                </div>
+                                <AddTodo addTodo={this.addTodo}/>
+                                <Todos todos={this.state.todos} markComplete={this.markComplete} delTodo={this.delTodo}/>
+                            </React.Fragment>
+                        )}/>
+                        <Route path="/about" component={About}/>
                 </div>
-            </Router>
+            </HashRouter>
         )
     }
 }
