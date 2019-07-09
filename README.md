@@ -1,6 +1,6 @@
 #React To-Do application
 
-###Dev branch commit
+###Dev branch
 This branch is under dev, might not be a stable release!!
 
 ##Purpose
