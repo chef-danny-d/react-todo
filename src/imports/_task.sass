@@ -1,16 +1,20 @@
 //all the styles regarding the task class would come here
 .task
   padding: 0
-  text-decoration-color: $gray-500
+  text-decoration-color: $black
   position: relative
   display: flex
-  background-color: $gray-500
-  border-bottom: 1px solid $gray-300
+  background-color: transparent
+  border-bottom: 1px solid $light-black
+  &:last-child
+    border-bottom: 0
   &--item
     padding: 0.25em 1.5em
     list-style: none
   &--input
     transform: scale(1.5)
+    &:checked + .task--item
+      opacity: 0.2
   &--group
     padding: 0.25em 1.5em
     width: 100%
@@ -18,7 +22,7 @@
     flex-direction: row
     align-items: center
   &--button
-    color: #f00
+    color: $mid-black
     background-color: transparent
     border: none
     padding: 0.15em 0.25em
@@ -34,18 +38,6 @@
     align-items: center
     &:hover
       transition: .25s ease all
-    &:after
-      display: none
-      content: ' '
-      height: 1.35em
-      width: 1.35em
-      background-color: #fff
-      transition: .25s ease all
-      border-radius: 50%
-      position: absolute
-      z-index: -1
-    &:hover::after
-      transition: .25s ease all
-      display: block
+      color: $danger
   &--icon
     color: $black
