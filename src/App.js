@@ -5,7 +5,6 @@ import "./App.sass"
 import Header from "./components/layout/Header"
 import AddTodo from "./components/AddTodo"
 import About from "./components/pages/About"
-import { v4 as uuidv4 } from "uuid"
 import axios from "axios"
 
 const source = "https://jsonplaceholder.typicode.com/todos?_start=0&_limit=10"
